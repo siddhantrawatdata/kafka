@@ -25,8 +25,8 @@ def main():
     """
     config={
         'user':'root',
-        'host':'localhost',
-        'password':'admin',
+        'host':'xxxx',
+        'password':'xxxx',
         'database':'buy_online',
         'raise_on_warnings':True
 
