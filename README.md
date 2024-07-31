@@ -26,7 +26,7 @@ Step4 : We create a pandas dataframe out of the dataset and by using the functio
 ##### Libraries
   ```import time``` : To find out the current timestamp \
   ```import pandas``` : To use the Dataframe functionalities and create robust datasets\
-  ```mysql.connector``` : To interact with the mysql database\
+  ```import mysql.connector``` : To interact with the mysql database\
   ```from confluent_kafka import SerializingProducer``` : To serialize the data so that we can use the faster write functionality of avro\
   ```from confluent_kafka.schema_registry import SchemaRegistryClient``` : To interact with schema registry of Confluent Kafka\
   ```from confluent_kafka.schema_registry.avro import AvroSerializer``` : To read the serialized avro data\
@@ -38,7 +38,22 @@ Step4 : We create a pandas dataframe out of the dataset and by using the functio
   ```def create_kafka_connection(product_data)``` : Create a kafka producer connection and publish the data to kafka brokers
   ```def date_update(my_cursor)``` : We update the ETL table ater successful reads so next time only changed data is picked from table
 
-![image](https://github.com/user-attachments/assets/e26b93fd-c139-475a-879b-06c82b4fa4a4)
+### Consumer Creation
+#### kafka-consumer-for-product.ipynb
+##### Libraries
+ ```import pandas as pd``` : To use the Dataframe functionalities and create robust datasets\
+ ```import datetime as dt``` : Date related transformations\
+ ```from confluent_kafka import DeserializingConsumer``` : To de-serialize the data for consumption\
+ ```from confluent_kafka.schema_registry import SchemaRegistryClient``` : To Interact with Schema registry of confluent Kafka\
+ ```from confluent_kafka.schema_registry.avro import AvroDeserializer``` : To De-serialize the avro data.\
+ ```from confluent_kafka.serialization import StringDeserializer``` : To De-serialize string data.\
+##### Execution
+```def kafka_consumer_connect()``` : Connect to the Kafka consumer and fetch the data from the topic
+```def transform_data(data)``` : Read the data as it comes and transform as per requirements
+```def write_to_json_file(transform_data)``` : Write the transformed data to json
+
+
+
 
 
 
