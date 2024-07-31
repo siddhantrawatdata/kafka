@@ -12,9 +12,9 @@ Kafka acts as a middle point where producer can publish the data and consumer ca
 Instead of taking data from Kaggle or any other website , I decided to generate data via a python script and insert the data into MySql server.
 #### my_sql_product_info_generation.py
 ##### Libraries
-mysql.connector : To connect to mysql srver to fetch/push the data \
-pandas : To use the dataframe functionaliteis to effectively visualize and insert the data\
-random : To generate random datasets to be inserted into mysql
+```mysql.connector``` : To connect to mysql srver to fetch/push the data \
+```pandas``` : To use the dataframe functionaliteis to effectively visualize and insert the data\
+```random``` : To generate random datasets to be inserted into mysql
 ##### Execution
 Step1 : Establish connection to the Mysql server 
 Step2 : Fetch the column information at runtime from the database to generate the insert query dynamically.\
