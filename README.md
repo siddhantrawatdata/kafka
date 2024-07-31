@@ -52,6 +52,9 @@ Step4 : We create a pandas dataframe out of the dataset and by using the functio
 ```def transform_data(data)``` : Read the data as it comes and transform as per requirements
 ```def write_to_json_file(transform_data)``` : Write the transformed data to json
 
+![image](https://github.com/user-attachments/assets/76e70e6f-6a61-43a6-b0a3-5bf60ec82a01)
+
+
 
 
 
